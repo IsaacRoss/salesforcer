@@ -2,7 +2,8 @@
  * Created by Isaac on 2/27/2015.
  */
 var assert = require('assert'),
-    Creator = require('./lib/creator');
+    Creator = require('./lib/creator'),
+    Lead = require('./models/lead')
 
 var SalesForcer = function(creds){
     var self = this;
@@ -16,8 +17,11 @@ var SalesForcer = function(creds){
 
     self.createLead = function(lead, next){
         var creator = new Creator();
-
-
+        lead = new Lead({
+            email: 'isaac@me.com',
+            firstName: 'Isaac',
+            lastName: 'Ross'
+        });
         creator.createLead(creds, lead, next);
     }
 };

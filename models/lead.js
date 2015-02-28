@@ -8,15 +8,15 @@ var Lead = function(args){
 
     var lead = {};
     lead.leadSource = args.leadSource || "Business Site Inquiry";
-    lead.firstName = args.firstName;
-    lead.lastName = args.lastName;
+    lead.firstName = args.firstName || '';
+    lead.lastName = args.lastName || '';
     lead.email = args.email;
-    lead.phone = args.phone;
-    lead.company = args.company;
+    lead.phone = args.phone || 'No Phone';
+    lead.company = args.company || 'No Company';
     lead.institution = args.institution;
-    lead.country = args.country;
-    lead.state = args.state;
-    lead.comments = args.comments;
+    lead.country = args.country || 'USA';
+    lead.state = args.state || '';
+    lead.comments = args.comments || '';
 
     return lead;
 };
