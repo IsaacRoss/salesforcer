@@ -3,11 +3,13 @@
  */
 var assert = require('assert');
 
-var Lead = function(args){
-    assert.ok(args.email, "Email is required");
-    assert.ok(args.company, "Compnay is required");
-
+var Lead = function (args) {
     var lead = {};
+    assert.ok(args.email, "Email is required");
+    assert.ok(args.company, "Company is required");
+    assert.ok(args.lastName, "LastName is required");
+
+
     lead.leadSource = args.leadSource || "Business Site Inquiry";
     lead.firstName = args.firstName || '';
     lead.lastName = args.lastName || '';
@@ -17,7 +19,6 @@ var Lead = function(args){
     lead.institution = args.institution || '';
     lead.country = args.country || 'USA';
     lead.state = args.state || '';
-    lead.comments = args.comments || '';
 
     return lead;
 };

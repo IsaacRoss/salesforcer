@@ -1,7 +1,7 @@
 /**
  * Created by isaacross on 2/27/15.
  */
-(function(){
+(function () {
     'use strict';
 
     var should = require('should'),
@@ -9,10 +9,10 @@
         sinon = require('sinon'),
         Creator = require('../lib/creator');
 
-    describe('Credentials and lead are valid', function(){
+    describe('Credentials and lead are valid', function () {
         var callSpy;
         var leadResult = {};
-        before(function(done){
+        before(function (done) {
 
             callSpy = sinon
                 .stub(request, 'post')
@@ -30,35 +30,35 @@
                 clientSecret: 'dddd',
                 username: 'dd',
                 password: 'ddd'
-            }, {email: 'iross@taskstream.com'}, function(err, result){
+            }, {email: 'iross@taskstream.com'}, function (err, result) {
                 leadResult = result;
             });
             done();
         });
-        it('is successful', function(){
+        it('is successful', function () {
             leadResult.success.should.equal(true);
         });
         it('sets a message of success', function () {
             leadResult.message.should.equal("Lead Saved Successfully");
         });
 
-        it('creates a valid url from instanceurl', function(){
+        it('creates a valid url from instanceurl', function () {
             leadResult.options.url.should.equal("http://ne.v3.com/services/data/v20.0/sobjects/Lead");
         });
 
-        it('creates a token', function(){
+        it('creates a token', function () {
             leadResult.token.should.equal("ABCDEF");
         });
 
-        it('sets the id of the lead', function(){
+        it('sets the id of the lead', function () {
             leadResult.lead.id.should.equal(2);
         });
 
-        it('makes all expected calls', function(){
+        it('makes all expected calls', function () {
             callSpy.stub.callCount.should.equal(2);
         });
 
-        after(function(done){
+        after(function (done) {
             request.post.restore();
             done();
         });
@@ -68,7 +68,7 @@
         var callSpy;
         var leadResult = {};
         var errResult = {};
-        before(function(done){
+        before(function (done) {
 
             callSpy = sinon
                 .stub(request, 'post')
@@ -86,22 +86,22 @@
                 clientSecret: 'dddd',
                 username: 'dd',
                 password: 'ddd'
-            }, {}, function(err, result){
+            }, {}, function (err, result) {
                 errResult = err;
                 leadResult = result;
             });
             done();
         });
 
-        it('never calls through to create lead', function(){
+        it('never calls through to create lead', function () {
             callSpy.stub.callCount.should.equal(1);
         });
 
-        it('sets error to error description', function(){
+        it('sets error to error description', function () {
             errResult.error_description.should.equal('invalid client credentials');
         });
 
-        after(function(done){
+        after(function (done) {
             request.post.restore();
             done();
         });

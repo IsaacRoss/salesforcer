@@ -5,7 +5,7 @@ var assert = require('assert'),
     Creator = require('./lib/creator'),
     Lead = require('./models/lead');
 
-var SalesForcer = function(creds){
+var SalesForcer = function (creds) {
     var self = this;
     assert.ok(creds.clientId, "You must provide a clientId");
     assert.ok(creds.clientSecret, "You must provide a clientSecret");
@@ -15,7 +15,7 @@ var SalesForcer = function(creds){
     self.creds = creds;
 
 
-    self.createLead = function(lead, next){
+    self.createLead = function (lead, next) {
         var creator = new Creator();
         lead = new Lead(lead);
         creator.createLead(creds, lead, next);
