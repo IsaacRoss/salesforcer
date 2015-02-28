@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="JavaScriptLibraryMappings">
-    <file url="file://$PROJECT_DIR$/index.js" libraries="{Node.js Globals, Node.js v0.10.26 Core Modules}" />
-    <file url="file://$PROJECT_DIR$/test/salesforcer.js" libraries="{Node.js Globals, Node.js v0.10.26 Core Modules}" />
-    <file url="PROJECT" libraries="{Node.js v0.10.26 Core Modules, mocha-DefinitelyTyped, should-DefinitelyTyped, sinon-DefinitelyTyped}" />
-    <includedPredefinedLibrary name="Node.js Globals" />
-  </component>
-</project>
