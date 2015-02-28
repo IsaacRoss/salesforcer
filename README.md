@@ -18,14 +18,15 @@ var sales = new SalesForcer({
 	password: 'password'
 })
 
-sales.createLead({
-                    email: 'me@bop.com',
-                    firstName: 'TESTAPILEAD',
-                    company: "My Test Company",
-                    lastName: 'fredrick'
-                }, function (err, result) {
-                    // do something with results
-                });
+sales
+    .createLead({
+        email: 'me@bop.com',
+        firstName: 'TESTAPILEAD',
+        company: "My Test Company",
+        lastName: 'fredrick'
+    }, function (err, result) {
+        // do something with results
+    });
 ```
 
 
