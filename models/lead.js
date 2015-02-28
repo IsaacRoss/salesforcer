@@ -5,6 +5,7 @@ var assert = require('assert');
 
 var Lead = function(args){
     assert.ok(args.email, "Email is required");
+    assert.ok(args.company, "Compnay is required");
 
     var lead = {};
     lead.leadSource = args.leadSource || "Business Site Inquiry";
@@ -13,7 +14,7 @@ var Lead = function(args){
     lead.email = args.email;
     lead.phone = args.phone || 'No Phone';
     lead.company = args.company || 'No Company';
-    lead.institution = args.institution;
+    lead.institution = args.institution || '';
     lead.country = args.country || 'USA';
     lead.state = args.state || '';
     lead.comments = args.comments || '';

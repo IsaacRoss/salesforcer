@@ -3,7 +3,7 @@
  */
 var assert = require('assert'),
     Creator = require('./lib/creator'),
-    Lead = require('./models/lead')
+    Lead = require('./models/lead');
 
 var SalesForcer = function(creds){
     var self = this;
@@ -17,13 +17,9 @@ var SalesForcer = function(creds){
 
     self.createLead = function(lead, next){
         var creator = new Creator();
-        lead = new Lead({
-            email: 'isaac@me.com',
-            firstName: 'Isaac',
-            lastName: 'Ross'
-        });
+        lead = new Lead(lead);
         creator.createLead(creds, lead, next);
-    }
+    };
 };
 
 module.exports = SalesForcer;
