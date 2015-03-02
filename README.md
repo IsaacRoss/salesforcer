@@ -1,4 +1,4 @@
-## Salesforcer Lead Saver
+## Salesforcer Lead Poster
 
 This is a module for the purpose of saving leads to salesforce via the Rest API. _**This module only supports the
 Session ID Authorization model**_.
