@@ -30,7 +30,7 @@
                 clientSecret: 'dddd',
                 username: 'dd',
                 password: 'ddd'
-            }, {email: 'iross@taskstream.com'}, function (err, result) {
+            }, {email: 'me@you.com'}, function (err, result) {
                 leadResult = result;
             });
             done();
