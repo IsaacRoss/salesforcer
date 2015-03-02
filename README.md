@@ -31,7 +31,7 @@ sales
 
 
 
-## **important**
+## **Important**
 ##### Please make sure to read about the security token [here](https://www.salesforce.com/developer/docs/api/Content/sforce_api_concepts_security.htm)
 Basically, you will have to append your security token to the end of your password.
 It tripped me up for a while until I found this information buried in the docs.
