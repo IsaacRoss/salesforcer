@@ -1,5 +1,5 @@
 {
-  "name": "salesforcer",
+  "name": "salesforcer-leadposter",
   "version": "0.0.0",
   "author": "Isaac Ross",
   "description": "Module for saving leads using the salesforce API",
@@ -14,5 +14,8 @@
     "mocha": "^2.1.0",
     "should": "^5.0.1",
     "sinon": "^1.12.2"
+  },
+  "scripts":{
+    "test": "mocha ./test/"
   }
 }
