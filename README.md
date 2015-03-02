@@ -1,7 +1,7 @@
 ## Salesforcer Lead Saver
 
-This is a module for the purpose of saving leads to salesforce via the Rest API. This module is only to build via the
-Session ID Authorization.
+This is a module for the purpose of saving leads to salesforce via the Rest API. _**This module only supports the
+Session ID Authorization model**_.
 
 You will need to obtain a clientId and a clientSecret. Please see documentation for more information.
 [Salesforce Rest Api Documentation](https://www.salesforce.com/us/developer/docs/api_rest/)
