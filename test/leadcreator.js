@@ -51,7 +51,7 @@
         });
 
         it('sets the id of the lead', function () {
-            leadResult.lead.id.should.equal(2);
+            leadResult.lead.should.equal('{"id":2}')
         });
 
         it('makes all expected calls', function () {

@@ -1,6 +1,6 @@
 {
   "name": "salesforcer",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Isaac Ross",
   "description": "Module for saving leads using the salesforce API",
   "dependencies": {

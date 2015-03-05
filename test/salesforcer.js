@@ -96,7 +96,7 @@
             });
 
             it('has lead information', function () {
-                leadResult.lead.id.should.equal(2);
+                leadResult.lead.should.equal('{"id":2}');
             });
 
             after(function () {
