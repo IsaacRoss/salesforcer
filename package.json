@@ -1,5 +1,5 @@
 {
-  "name": "salesforcer-leadposter",
+  "name": "salesforcer",
   "version": "0.0.0",
   "author": "Isaac Ross",
   "description": "Module for saving leads using the salesforce API",
