@@ -77,10 +77,10 @@
                         id: 2
                     }));
                 sales.createLead({
-                    email: 'me@bop.com',
-                    firstName: 'TESTAPILEAD',
-                    company: "My Test Company",
-                    lastName: 'bop'
+                    Email: 'me@bop.com',
+                    FirstName: 'TESTAPILEAD',
+                    Company: "My Test Company",
+                    LastName: 'bop'
                 }, function (err, result) {
                     leadResult = result;
                 });
@@ -118,10 +118,10 @@
                         errorCode: "REQ"
                     }));
                 sales.createLead({
-                    email: 'me@bop.com',
-                    firstName: 'TESTAPILEAD',
-                    company: "My Test Company",
-                    lastName: 'fredrick'
+                    Email: 'me@bop.com',
+                    FirstName: 'TESTAPILEAD',
+                    Company: "My Test Company",
+                    LastName: 'fredrick'
                 }, function (err, result) {
                     leadResult = result;
                     errResult = err;
