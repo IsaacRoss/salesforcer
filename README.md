@@ -7,7 +7,6 @@ You will need to obtain a clientId and a clientSecret. Please see documentation 
 [Salesforce Rest Api Documentation](https://www.salesforce.com/us/developer/docs/api_rest/)
 
 
-
 ```javascript
 var SalesForcer = require('salesforcer');
 
@@ -20,15 +19,15 @@ var sales = new SalesForcer({
 
 sales
     .createLead({
-        email: 'me@bop.com',
-        firstName: 'TESTAPILEAD',
-        company: "My Test Company",
-        lastName: 'fredrick'
+        Email: 'me@bop.com',
+        FirstName: 'TESTAPILEAD',
+        Company: "My Test Company",
+        LastName: 'fredrick'
     }, function (err, result) {
         // do something with results
     });
 ```
-
+createLead takes an object and tries to pass that off to the salesforce api. All object properties must be valid Lead properties in your system. 
 
 
 ## **Important**
